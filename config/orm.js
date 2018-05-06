@@ -39,13 +39,29 @@ var orm = {
             cb(result)
         });
     },
+
     insertOne: function (table, cols, vals, cb) {
         var query = "INSERT INTO " + table;
         query += "(" + cols.toString() + ")";
-        query += "VALUES (" + questionMarks(vals.length) + ")";
-    },
-    updateOne: function () {
+        query += "VALUES (" + questionMarks(vals.length) + ") ";
+        
+        connection.query(query, vals, function(err, result) {
+            if (err) throw err;
 
+            cb(result);
+        });
+    },
+
+    updateOne: function (table, objColVals, condition, cb) {
+        var query = "UPDATE " + table;
+        query += " SET " + objToSql(objColVals);
+        query += " WHERE " + condition;
+
+        connection.query(query, function(err, result) {
+            if (err) throw err;
+
+            cb(result);
+        });
     }
 };
 
