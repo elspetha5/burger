@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eat-Da-Burger</title>
+    <link rel="stylesheet" href="assets/css/burger_style.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+
+        <img id="burgerPic" src="assets/img/burger.png" alt="Burger">
+
+        <h1>Eat-Da-Burger!</h1>
+
+        <div id="not-devoured-box">
+            <ul>
+                <li>Burger 1</li>
+            </ul>
+        </div>
+
+        <div id="devoured-box">
+            <ul>
+                <li>Devoured Burger</li>
+            </ul>
+        </div>
+
+        <div id="newBurger">
+            <h2>Add a Burger</h2>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="newBurger">Burger Name:</label>
+                    <input type="text" id="newBurgerName" name="burger_name">
+                </div>
+
+                <button type="submit">Add Burger</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
