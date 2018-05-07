@@ -1,24 +1,29 @@
 <div id="container">
 
-    <img src="/public/assets/img/burger.jpg" alt="Burger">
+    <img src="/assets/img/burger.png" alt="Burger" id="burgerPic">
 
     <h1>Eat-Da-Burger!</h1>
 
     <div id="not-devoured-box">
-    <ul id="not-devoured" style="width:50%">
+    <ul id="not-devoured">
         {{#each burgers}}
             {{#unless devoured}}
-                {{> burgers/burger-block devoured=true}}
+                <li>
+                    {{burger_name}}
+                    <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
+                        Devour it!
+                    </button>
+                </li>
             {{/unless}}
         {{/each}}
     </ul>
     </div>
 
     <div id="devoured-box">
-    <ul id="devoured" style="float:left;width:50%">
+    <ul id="devoured">
         {{#each burgers}}
             {{#if devoured}}
-                {{> burgers/burger-block devoured=false}}
+                <li>{{name}}</li>
             {{/if}}
         {{/each}}
     </ul>
@@ -28,8 +33,8 @@
     <h2>Add a Burger</h2>
     <form class="create-form">
         <div class="form-group">
-            <label for="newBurger">Burger Name:</label>
-            <input type="text" id="newBurger" name="burger_name">
+            <label for="newBurgerName">Burger Name:</label>
+            <input type="text" id="newBurgerName" name="burger_name">
         </div>
 
         <button type="submit">Add Burger</button>
