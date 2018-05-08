@@ -6,11 +6,12 @@
 
     <div id="not-devoured-box">
     <ul id="not-devoured">
+        <lh>To Eat:</lh>
         {{#each burgers}}
             {{#unless devoured}}
                 <li>
                     {{burger_name}}
-                    <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
+                    <button class="devourButton" data-id="{{id}}">
                         Devour it!
                     </button>
                 </li>
@@ -21,9 +22,10 @@
 
     <div id="devoured-box">
     <ul id="devoured">
+        <lh>Eaten:</lh>
         {{#each burgers}}
             {{#if devoured}}
-                <li>{{name}}</li>
+                <li>{{burger_name}}</li>
             {{/if}}
         {{/each}}
     </ul>
@@ -31,13 +33,13 @@
 
     <div id="newBurger">
     <h2>Add a Burger</h2>
-    <form class="create-form">
+    <form class="newBurgerform">
         <div class="form-group">
             <label for="newBurgerName">Burger Name:</label>
             <input type="text" id="newBurgerName" name="burger_name">
         </div>
 
-        <button type="submit">Add Burger</button>
+        <button type="submit" id="submitButton">Add Burger</button>
     </form>
     </div>
 

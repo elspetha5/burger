@@ -12,7 +12,7 @@ function questionMarks(num) {
 };
 
 // 
-function objToSql(ob) {
+/* function objToSql(ob) {
     var arr = [];
 
     for (var key in ob) {
@@ -28,7 +28,7 @@ function objToSql(ob) {
     };
 
     return arr.toString();
-}
+} */
 
 
 var orm = {
@@ -52,9 +52,9 @@ var orm = {
         });
     },
 
-    updateOne: function (table, objColVals, condition, cb) {
+    updateOne: function (table, column, condition, cb) {
         var query = "UPDATE " + table;
-        query += " SET " + objToSql(objColVals);
+        query += " SET " + column;
         query += " WHERE " + condition;
 
         connection.query(query, function(err, result) {
