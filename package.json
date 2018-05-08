@@ -1,10 +1,18 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This is very close to a to-do app, except the list consists of one thing: what burger(s) you need to eat.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express-handlebars": "^3.0.0",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,11 +23,5 @@
   "bugs": {
     "url": "https://github.com/elspetha5/burger/issues"
   },
-  "homepage": "https://github.com/elspetha5/burger#readme",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "mysql": "^2.15.0"
-  }
+  "homepage": "https://github.com/elspetha5/burger#readme"
 }
