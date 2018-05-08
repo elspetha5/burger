@@ -4,4 +4,6 @@ This is very close to a to-do app, except the list consists of one thing: what b
 
 Now when you're out and about, or simply watching *Diners, Drive-ins and Dives*, you can keep track of all the burgers your heart desires to eat and which ones have already been devoured!
 
+Link to app: https://floating-depths-62584.herokuapp.com/
+
 ![Eat-Da-Burger App](/public/assets/img/eat-da-burger.PNG)
